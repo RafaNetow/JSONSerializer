@@ -54,25 +54,33 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Calculetor.feature.cs">
+    <Compile Include="Specs\Calculetor.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Calculetor.feature</DependentUpon>
     </Compile>
-    <Compile Include="CalculetorSteps.cs" />
+    <Compile Include="Specs\PrimitiveTypes.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrimitiveTypes.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Steps\CalculetorSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\PrimitiveTypesSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Calculetor.feature">
+    <None Include="Specs\Calculetor.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Calculetor.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <None Include="Specs\PrimitiveTypes.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PrimitiveTypes.feature.cs</LastGenOutput>
+    </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Specs\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\JsonSerializer\JsonSerializer.csproj">
       <Project>{4f9d2fa3-2d6e-44cb-8ba4-a4640d7008d8}</Project>
